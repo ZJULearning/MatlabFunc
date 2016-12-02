@@ -25,8 +25,12 @@ function label = LSC(data,k,opts)
 %       label = LSC(data,10);
 %Reference:
 %
-%	Xinlei Chen, Deng Cai, "Large Scale Spectral Clustering with
+%	[1] Xinlei Chen, Deng Cai, "Large Scale Spectral Clustering with
 %	Landmark-Based Representation," AAAI 2011. 
+%
+%   [2] Deng Cai, Xinlei Chen: Large Scale Spectral Clustering Via
+%   Landmark-Based Sparse Representation. IEEE Trans. Cybernetics 45(8):
+%   1669-1680 (2015)  
 %
 %   version 2.0 --Dec./2011 
 %   version 1.0 --Oct./2010 
