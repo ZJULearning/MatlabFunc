@@ -13,9 +13,10 @@ datasetCandi = {'siftsmall'};
 % methodCandi = {'BRE'};
 % methodCandi = {'USPLH'};
 % methodCandi = {'KLSH'};
-methodCandi = {'IsoH'};
+% methodCandi = {'IsoH'};
+methodCandi = {'DSH'};
 
-methodCandi = {'LSH','SH','BRE','USPLH','ITQ','SpH','IsoH'};
+% methodCandi = {'LSH','SH','BRE','USPLH','ITQ','SpH','IsoH','DSH'};
 
 % codelengthCandi = [24 28 36 40 44 48];
 codelengthCandi = [32];
