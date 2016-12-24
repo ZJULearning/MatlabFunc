@@ -2,7 +2,7 @@ dataset = 'siftsmall';
 %dataset = 'sift';
 %dataset = 'gist';
 
-Number = 4;
+Number = 2;
 nLandmarks = 1000;
 MaxIter = 5;
 

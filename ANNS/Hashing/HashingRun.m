@@ -14,14 +14,14 @@ datasetCandi = {'siftsmall'};
 % methodCandi = {'USPLH'};
 % methodCandi = {'KLSH'};
 % methodCandi = {'IsoH'};
-methodCandi = {'DSH'};
+% methodCandi = {'DSH'};
 
-% methodCandi = {'LSH','SH','BRE','USPLH','ITQ','SpH','IsoH','DSH'};
+methodCandi = {'LSH','SH','BRE','USPLH','ITQ','SpH','IsoH','DSH'};
 
 % codelengthCandi = [24 28 36 40 44 48];
 codelengthCandi = [32];
 
-nHashTable = 4;
+nHashTable = 2;
 
 
 bBinaryFile = 1;

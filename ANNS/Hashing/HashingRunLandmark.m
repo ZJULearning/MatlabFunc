@@ -12,7 +12,7 @@ datasetCandi = {'siftsmall'};
 % methodCandi = {'KLSH'};
 % methodCandi = {'HamH'};
 
-methodCandi = {'KLSH','AGH1','AGH2','CH'};
+methodCandi = {'KLSH','AGH1','AGH2','CH','HamH','CPH'};
 
 
 % codelengthCandi = [24 28 36 40 44 48];
@@ -20,7 +20,7 @@ codelengthCandi = [32];
 
 
 nHTstart = 1;
-nHTend = 16;
+nHTend = 2;
 
 nLandmarks = 1000;
 Iter = 5;

@@ -1,4 +1,4 @@
-function K = constructKernel(fea_a,fea_b,options)
+function [K, options] = constructKernel(fea_a,fea_b,options)
 % function K = constructKernel(fea_a,fea_b,options)
 %	Usage:
 %	K = constructKernel(fea_a,[],options)
@@ -40,9 +40,9 @@ end
 
 switch lower(options.KernelType)
     case {lower('Gaussian')}        %  e^{-(|x-y|^2)/2t^2}
-        if ~isfield(options,'t')
-            options.t = 1;
-        end
+%         if ~isfield(options,'t')
+%             options.t = 1;
+%         end
     case {lower('Polynomial')}      % (x'*y)^d
         if ~isfield(options,'d')
             options.d = 2;
@@ -65,6 +65,9 @@ switch lower(options.KernelType)
             D = EuDist2(fea_a,[],0);
         else
             D = EuDist2(fea_a,fea_b,0);
+        end
+        if ~isfield(options,'t')
+            options.t = sqrt(mean(min(D, [], 2)));
         end
         K = exp(-D/(2*options.t^2));
     case {lower('Polynomial')}     
