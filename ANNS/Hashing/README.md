@@ -38,16 +38,16 @@ If you have some problems or find some bugs in the codes, please email: dengcai 
 
 
 
-[1] Aristides Gionis, Piotr Indyk, Rajeev Motwani: Similarity Search in High Dimensions via Hashing. VLDB 1999: 518-529   
-[2] Yair Weiss, Antonio Torralba, Robert Fergus: Spectral Hashing. NIPS 2008: 1753-1760   
-[3] Brian Kulis, Kristen Grauman: Kernelized locality-sensitive hashing for scalable image search. 2130-2137, ICCV 2009   
-[4] Brian Kulis, Trevor Darrell: Learning to Hash with Binary Reconstructive Embeddings. NIPS 2009: 1042-1050   
-[5] Jun Wang, Sanjiv Kumar, Shih-Fu Chang: Sequential Projection Learning for Hashing with Compact Codes. ICML 1127-1134, 2010   
-[6] Yunchao Gong, Svetlana Lazebnik: Iterative quantization: A procrustean approach to learning binary codes. CVPR 2011   
-[7] Wei Liu, Jun Wang, Sanjiv Kumar, Shih-Fu Chang: Hashing with Graphs. ICML 2011   
-[8] Jae-Pil Heo, Youngwoon Lee, Junfeng He, Shih-Fu Chang, Sung-Eui Yoon: Spherical hashing. CVPR 2012   
-[9] Weihao Kong, Wu-Jun Li: Isotropic Hashing. NIPS 1655-1663 2012   
-[10] Yue Lin, Rong Jin, Deng Cai, Shuicheng Yan, Xuelong Li: Compressed Hashing. CVPR 2013   
-[11] Zhongming Jin, Yao Hu, Yue Lin, Debing Zhang, Shiding Lin, Deng Cai, Xuelong Li: Complementary Projection Hashing. 257-264 ICCV 2013   
-[12] Bin Xu, Jiajun Bu, Yue Lin, Chun Chen, Xiaofei He, Deng Cai: Harmonious Hashing. 1820-1826 IJCAI 2013   
-[13] Zhongming Jin, Cheng Li, Yue Lin, Deng Cai: Density Sensitive Hashing. IEEE Trans. Cybernetics 44(8): 1362-1371 (2014)   
+1. Aristides Gionis, Piotr Indyk, Rajeev Motwani: Similarity Search in High Dimensions via Hashing. VLDB 1999: 518-529   
+2. Yair Weiss, Antonio Torralba, Robert Fergus: Spectral Hashing. NIPS 2008: 1753-1760   
+3. Brian Kulis, Kristen Grauman: Kernelized locality-sensitive hashing for scalable image search. 2130-2137, ICCV 2009   
+4. Brian Kulis, Trevor Darrell: Learning to Hash with Binary Reconstructive Embeddings. NIPS 2009: 1042-1050   
+5. Jun Wang, Sanjiv Kumar, Shih-Fu Chang: Sequential Projection Learning for Hashing with Compact Codes. ICML 1127-1134, 2010   
+6. Yunchao Gong, Svetlana Lazebnik: Iterative quantization: A procrustean approach to learning binary codes. CVPR 2011   
+7. Wei Liu, Jun Wang, Sanjiv Kumar, Shih-Fu Chang: Hashing with Graphs. ICML 2011   
+8. Jae-Pil Heo, Youngwoon Lee, Junfeng He, Shih-Fu Chang, Sung-Eui Yoon: Spherical hashing. CVPR 2012   
+9. Weihao Kong, Wu-Jun Li: Isotropic Hashing. NIPS 1655-1663 2012   
+10. Yue Lin, Rong Jin, Deng Cai, Shuicheng Yan, Xuelong Li: Compressed Hashing. CVPR 2013   
+11. Zhongming Jin, Yao Hu, Yue Lin, Debing Zhang, Shiding Lin, Deng Cai, Xuelong Li: Complementary Projection Hashing. 257-264 ICCV 2013   
+12. Bin Xu, Jiajun Bu, Yue Lin, Chun Chen, Xiaofei He, Deng Cai: Harmonious Hashing. 1820-1826 IJCAI 2013   
+13. Zhongming Jin, Cheng Li, Yue Lin, Deng Cai: Density Sensitive Hashing. IEEE Trans. Cybernetics 44(8): 1362-1371 (2014)   
