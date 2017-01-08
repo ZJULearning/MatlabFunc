@@ -94,7 +94,7 @@ else
 end
 
 % Z construction
-D = EuDist2(data,marks,0);
+D = EuDist2(data,marks);
 
 if isfield(opts,'sigma')
     sigma = opts.sigma;
