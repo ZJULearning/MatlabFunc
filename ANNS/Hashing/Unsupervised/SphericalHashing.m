@@ -48,7 +48,7 @@ function [O1, O2, radii, avg, stddev] = compute_statistics(data, centers)
     
     dist = EuDist2(centers,data);
     sort_dist = sort(dist, 2);
-    radii = sort_dist(:, N / 2);
+    radii = sort_dist(:, floor(N / 2));
     dist = dist <= repmat(radii, 1, N);
     dist = dist * 1.0;
 
