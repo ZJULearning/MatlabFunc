@@ -13,6 +13,13 @@ function [model, B, elapse] = LSH_learn(A, maxbits)
 %
 %
 %
+%   Reference:
+%
+%   Moses S. Charikar: Similarity estimation techniques from rounding
+%   algorithms. Proceedings of the thiry-fourth annual ACM symposium on
+%   Theory of computing, 2002.  
+%
+%
 %   version 2.0 --Nov/2016 
 %   version 1.0 --Jan/2010 
 %
