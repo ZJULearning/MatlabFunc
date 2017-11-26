@@ -46,7 +46,7 @@ function [eigvector, eigvalue] = KDA(options,gnd,data)
 %       options.t = 1;
 %       [eigvector, eigvalue] = KDA(options, gnd, fea);
 %
-%       feaTest = rand(3,10);
+%       feaTest = rand(3,70);
 %       Ktest = constructKernel(feaTest,fea,options)
 %       Y = Ktest*eigvector;
 %
