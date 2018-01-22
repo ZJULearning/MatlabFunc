@@ -31,10 +31,14 @@ function [model, B, elapse]  = CH_learn(A, maxbits, Landmarks, rL)
 tmp_T = tic;
 
 
-nLandmarks = 1000;
 if ~exist('Landmarks','var')
+    nLandmarks = 1000;
     [~,Landmarks]=litekmeans(A,nLandmarks,'MaxIter',5,'Replicates',1);
+else
+    nLandmarks = size(Landmarks,1);
 end
+
+
 
 % Z construction
 D = EuDist2(A,Landmarks,0);
