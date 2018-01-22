@@ -1,4 +1,4 @@
-function [model, B,elapse] = IsoH_learn(A, maxbits)
+function [model, B, elapse] = IsoH_learn(A, maxbits)
 %   This is a wrapper function of Isotropic Hashing learning.
 %
 %	Usage:
@@ -22,9 +22,27 @@ function [model, B,elapse] = IsoH_learn(A, maxbits)
 
 tmp_T = tic;
 
-[pc, pv] = eigs(A'*A, maxbits);
+
+
+ATA = A'*A;
+sizeM = size(ATA,1);
+if maxbits > sizeM/2
+    if maxbits > sizeM
+        maxbits = sizeM;
+    end
+    [pc, pv] = eig(ATA);
+    pv = diag(pv);
+    [~, index] = sort(-pv);
+    index=index(1:maxbits);
+    pc = pc(:,index);
+    pv = diag(pv(index));
+else
+    [pc, pv] = eigs(ATA, maxbits);
+end
+
 
 a = mean(diag(pv));
+
 n_iter = 100;
 
 %R = eye(maxbits);

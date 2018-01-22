@@ -10,13 +10,29 @@ function [model] = SpectralHashing(X, maxbits)
 % Advances in Neural Information Processing Systems, 2008.
 
 
-[Nsamples, Ndim] = size(X);
-
 % 1) PCA
 
-npca = min(maxbits, Ndim);
 
-[pc, l] = eigs(cov(X), npca);
+C = cov(X);
+sizeC = size(C,1);
+npca = min(maxbits, sizeC);
+if maxbits > sizeC
+    maxbits = sizeC;
+end
+
+
+if npca > sizeC/2
+    [pc, eigvalue] = eig(C);
+    eigvalue = diag(eigvalue);
+    [~, index] = sort(-eigvalue);
+    index=index(1:npca);
+    pc = pc(:,index);
+else
+    [pc, ~] = eigs(C, npca);
+end
+
+
+
 % The above line can be replaced as it is very slow in comparison to 
 % the PCA code by Deng Cai
 % [pc, l] = PCA(X./sqrt(Nsamples-1),struct('ReducedDim',npca));
