@@ -1,4 +1,4 @@
-function [model, B,elapse] = ITQ_learn(A, maxbits)
+function [model, B, elapse] = ITQ_learn(A, maxbits)
 %   This is a wrapper function of ITQ learning.
 %
 %	Usage:
@@ -22,7 +22,22 @@ function [model, B,elapse] = ITQ_learn(A, maxbits)
 
 tmp_T = tic;
 
-[pc, ~] = eigs(cov(A), maxbits);
+C = cov(A);
+sizeC = size(C,1);
+if maxbits > sizeC/2
+    if maxbits > sizeC
+        maxbits = sizeC;
+    end
+    [pc, eigvalue] = eig(cov(A));
+    eigvalue = diag(eigvalue);
+    [~, index] = sort(-eigvalue);
+    index=index(1:maxbits);
+    pc = pc(:,index);
+else
+    [pc, ~] = eigs(cov(A), maxbits);
+end
+
+
 A = A * pc;
 [~, R] = ITQ(A, 50);
 A = A * R;
