@@ -30,8 +30,6 @@ All these hashing algorithms are in the **Unsupervised** folder
 * The *HashingRunLandmarkLongCode.m* is used to call a specified hashing algorithm (with landmarks input, eg, KLSH, AGH, CH, CPH, HamH) to generate the binary code of the base set and the query set.
 * The *GenLandmarks.m* is used to generate and save landmarks.
 
-The binary code of the base and query sets can be save in a TXT or binary format. Please read the code for details.
-
 The binary format code file can be used as the hash index of the [Search with Hash Index](https://github.com/ZJULearning/hashingSearch) algorithm.
 
 If you have some problems or find some bugs in the codes, please email: dengcai AT gmail DOT com
