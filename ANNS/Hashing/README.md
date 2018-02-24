@@ -26,9 +26,7 @@ If you have a new hashing algorithm and want to share with us, welcome to send t
 
 All these hashing algorithms are in the **Unsupervised** folder
 
-* The *HashingRunLongCode.m* is used to call a specified hashing algorithm (without landmarks input, eg, LSH, SH, BRE, USPLH, ITQ, SpH, IsoH, DSH) to generate the binary code of the base set and the query set, and the long code will be stored in multiple 32-bits tables for convenience.
-* The *HashingRunLandmarkLongCode.m* is used to call a specified hashing algorithm (with landmarks input, eg, KLSH, AGH, CH, CPH, HamH) to generate the binary code of the base set and the query set.
-* The *GenLandmarks.m* is used to generate and save landmarks.
+* The *HashingRunLongCode.m* is used to call a specified hashing algorithm (eg, LSH, SH, BRE ...) to generate the binary code of the base set and the query set, and the long code will be stored in multiple 32-bits tables for convenience.
 
 The binary format code file can be used as the hash index of the [Search with Hash Index](https://github.com/ZJULearning/hashingSearch) algorithm.
 
