@@ -1,4 +1,4 @@
-function [model, B,elapse] = HamH_learn(A, maxbits, Landmarks, rL)
+function [model, B,elapse] = HamH_learn(A, maxbits, Landmarks)
 %   This is a wrapper function of Harmonious Hashing learning.
 %
 %	Usage:
@@ -7,8 +7,6 @@ function [model, B,elapse] = HamH_learn(A, maxbits, Landmarks, rL)
 %	      A: Rows of vectors of data points. Each row is sample point
 %   maxbits: Code length
 % Landmarks: Landmarks (anchors), Each row is sample point
-%        rL: Not used. Just to make this wrpper fuction has the same number
-%            of input variables as others
 %
 %     model: Used for encoding a test sample point.
 %	      B: The binary code of the input data A. Each row is sample point
@@ -26,6 +24,12 @@ function [model, B,elapse] = HamH_learn(A, maxbits, Landmarks, rL)
 
 tmp_T = tic;
 %%%%%%%%%%%%%%%%%%%%%%%
+
+if ~exist('Landmarks','var')
+    nLandmarks = 1500;
+    [~,Landmarks]=litekmeans(A,nLandmarks,'MaxIter',5,'Replicates',1);
+end
+
 opts = [];
 opts.mode = 'given';
 opts.ancs = Landmarks;

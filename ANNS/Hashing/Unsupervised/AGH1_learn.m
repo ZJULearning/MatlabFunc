@@ -27,7 +27,7 @@ tmp_T = tic;
 
 options.CodingMethod = 'Gaussian';
 
-nAnchor = 1000;
+nAnchor = 1500;
 if ~exist('Anchor','var')
     [~,Anchor]=litekmeans(A,nAnchor,'MaxIter',5,'Replicates',1);
 end

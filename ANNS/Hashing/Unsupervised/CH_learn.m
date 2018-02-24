@@ -32,12 +32,14 @@ tmp_T = tic;
 
 
 if ~exist('Landmarks','var')
-    nLandmarks = 1000;
+    nLandmarks = 1500;
     [~,Landmarks]=litekmeans(A,nLandmarks,'MaxIter',5,'Replicates',1);
 else
     nLandmarks = size(Landmarks,1);
 end
-
+if ~exist('rL','var')
+    rL = 50;
+end
 
 
 % Z construction

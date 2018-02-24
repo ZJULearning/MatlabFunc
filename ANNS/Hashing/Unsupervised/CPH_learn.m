@@ -1,14 +1,12 @@
-function [model, B, elapse]  = CPH_learn(A, maxbits, Landmarks, rL)
+function [model, B, elapse]  = CPH_learn(A, maxbits, Landmarks)
 %   This is a function of CPH (Complmentary Projection Hashing) learning.
 %
 %	Usage:
-%	[model, B,elapse] = CPH_learn(A, maxbits, Landmarks, rL)
+%	[model, B,elapse] = CPH_learn(A, maxbits, Landmarks)
 %
 %	      A: Rows of vectors of data points. Each row is sample point
 %   maxbits: Code length
 % Landmarks: Landmarks (anchors), Each row is sample point
-%        rL: Not used. Just to make this wrpper fuction has the same number
-%            of input variables as others
 %
 %     model: Used for encoding a test sample point.
 %	      B: The binary code of the input data A. Each row is sample point
@@ -28,7 +26,7 @@ function [model, B, elapse]  = CPH_learn(A, maxbits, Landmarks, rL)
 tmp_T = tic;
 
 
-nLandmarks = 1000;
+nLandmarks = 1500;
 if ~exist('Landmarks','var')
     [~,Landmarks]=litekmeans(A,nLandmarks,'MaxIter',5,'Replicates',1);
 end

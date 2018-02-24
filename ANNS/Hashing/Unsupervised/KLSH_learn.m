@@ -1,4 +1,4 @@
-function [model, B,elapse] = KLSH_learn(A, maxbits, Landmarks, rL)
+function [model, B,elapse] = KLSH_learn(A, maxbits, Landmarks)
 %   This is a function of Kernelized LSH learning.
 %   The  KLSH TPAMI did not mension how to constrct the kernel. We follow
 %   the method in Complmentary Projection Hashing ICCV 2013.
@@ -8,6 +8,7 @@ function [model, B,elapse] = KLSH_learn(A, maxbits, Landmarks, rL)
 %
 %	      A: Rows of vectors of data points. Each row is sample point
 %   maxbits: Code length
+% Landmarks: Landmarks (anchors), Each row is sample point
 %
 %     model: Used for encoding a test sample point.
 %	      B: The binary code of the input data A. Each row is sample point
@@ -24,7 +25,7 @@ function [model, B,elapse] = KLSH_learn(A, maxbits, Landmarks, rL)
 
 tmp_T = tic;
 
-nLandmarks = 1000;
+nLandmarks = 1500;
 if ~exist('Landmarks','var')
     [~,Landmarks]=litekmeans(A,nLandmarks,'MaxIter',5,'Replicates',1);
 end
