@@ -27,8 +27,9 @@ If you have a new hashing algorithm and want to share with us, welcome to send t
 All these hashing algorithms are in the **Unsupervised** folder
 
 * The *HashingRunLongCode.m* is used to call a specified hashing algorithm (eg, LSH, SH, BRE ...) to generate the binary code of the base set and the query set, and the long code will be stored in multiple 32-bits tables for convenience.
+* The *GenKmeansPartitions.m* is used to generate kmeans partitions of the data.
 
-The binary format code file can be used as the hash index of the [Search with Hash Index](https://github.com/ZJULearning/hashingSearch) algorithm.
+The binary format code file and the partition file can be used as the hash index of the [Search with Hash Index](https://github.com/ZJULearning/hashingSearch) algorithm.
 
 If you have some problems or find some bugs in the codes, please email: dengcai AT gmail DOT com
 
